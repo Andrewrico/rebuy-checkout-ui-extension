@@ -6,7 +6,7 @@
 //
 // This is the single place to update when the ngrok URL rotates.
 export const BACKEND_URL =
-  "https://your-ngrok-domain.ngrok-free.app/api/rebuy/checkout-upsells";
+  "https://singer-cedar-agencies-accessed.trycloudflare.com/api/rebuy/checkout-upsells";
 
 export const DEFAULT_HEADING = "You might also like";
 export const DEFAULT_MAX_CARDS = 4;
