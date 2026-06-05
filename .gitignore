@@ -26,3 +26,8 @@ pnpm-lock.yaml
 
 # Ruflo plugin local database
 ruvector.db
+
+/.claude
+
+# Local dev log from `shopify app dev`
+dev.log
