@@ -1,0 +1,32 @@
+api_version = "2025-07"
+
+[[extensions]]
+type   = "ui_extension"
+name   = "Rebuy Checkout Recommendations"
+handle = "rebuy-checkout-recs"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.block.render"
+  module = "./src/Checkout.tsx"
+
+  # Required so the extension can fetch the backend proxy (ngrok in dev).
+  [extensions.capabilities]
+  network_access = true
+
+  [extensions.settings]
+    # Optional override of the BACKEND_URL constant in src/config.ts.
+    # Set this to the ngrok URL during dev, or the hosted backend URL in prod.
+    [[extensions.settings.fields]]
+    key  = "backend_url"
+    type = "single_line_text_field"
+    name = "Upsells backend URL"
+
+    [[extensions.settings.fields]]
+    key  = "heading"
+    type = "single_line_text_field"
+    name = "Section heading"
+
+    [[extensions.settings.fields]]
+    key  = "max_cards"
+    type = "number_integer"
+    name = "Max cards to show"
