@@ -7,7 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 A self-contained Shopify app with two parts that ship together:
 
 - **Checkout UI extension** (`extensions/rebuy-checkout-recs/`) — renders Rebuy
-  recommendations in checkout. Target: `purchase.checkout.cart-line-list.render-after`.
+  recommendations in checkout. Target: `purchase.checkout.block.render` (a static
+  block — a merchant must place it via the checkout editor; it doesn't auto-render).
   Runs client-side in the checkout sandbox; **cannot hold secrets**.
 - **Remix backend proxy** (`app/`) — holds the Rebuy API key + Storefront token,
   calls Rebuy, filters in-cart products, validates variants, returns normalized cards.
@@ -28,7 +29,8 @@ known quirk; don't switch local commands to yarn.
 - `npm run deploy` — `shopify app deploy`
 
 Requires Node `>=20.19 <22 || >=22.12`. TypeScript is `strict`. There is no
-`typecheck` script — use `npx tsc --noEmit`. No test runner is configured.
+`typecheck` script — use `npx tsc --noEmit`. Tests run with Vitest via
+`npm test` (`vitest run`); backend unit tests live in `app/rebuy/*.test.ts`.
 
 ## Critical rules
 

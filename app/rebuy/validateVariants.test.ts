@@ -31,7 +31,7 @@ describe("validateVariants", () => {
   beforeEach(() => {
     vi.stubGlobal("fetch", fetchMock);
     fetchMock.mockReset();
-    process.env.STOREFRONT_DOMAIN = "andrewrico-demo.myshopify.com";
+    process.env.STOREFRONT_DOMAIN = "developfy101.myshopify.com";
     process.env.STOREFRONT_TOKEN = "test-token";
   });
 

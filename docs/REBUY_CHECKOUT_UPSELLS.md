@@ -2,7 +2,7 @@
 
 A Shopify **Checkout UI Extension** that renders Rebuy-powered upsell cards inside
 checkout, fed by a **backend proxy route** so the Rebuy API key never reaches the
-browser. Built for `andrewrico-demo.myshopify.com`, Rebuy datasource **`300871`**.
+browser. Built for `developfy101.myshopify.com`, Rebuy datasource **`300871`**.
 
 No Rebuy widgets, no Liquid, no theme JS.
 
@@ -42,7 +42,7 @@ Copy `.env.example` → `.env` and fill in:
 | `REBUY_DATASOURCE_ID` | `300871`. |
 | `REBUY_LIMIT` | Recs requested before filtering (default 8). |
 | `SHOP_CURRENCY` | Currency stamped on cards (default USD). |
-| `STOREFRONT_DOMAIN` | `andrewrico-demo.myshopify.com`. |
+| `STOREFRONT_DOMAIN` | `developfy101.myshopify.com`. |
 | `STOREFRONT_TOKEN` | Storefront API access token (Admin → Settings → Apps and sales channels → Develop apps → Storefront API). |
 | `SHOPIFY_API_KEY` / `SHOPIFY_API_SECRET` / `SCOPES` / `SHOPIFY_APP_URL` | Filled by the CLI on `shopify app dev`. |
 
